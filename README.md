@@ -26,9 +26,13 @@ El proyecto cuenta con dos pantallas principales, estas son
 * Pantalla de ordenes, donde se listaran las ordenes que posea el usuario
 ![myOrders](./assets/MyOrders.png "myOrders")
 
+Los botones de tracking y de reportar un problemas estan con fines meramente ilustrativos
+
 * Pantalla de detalle de orden donde muestra de nuevo, el resumen de la orden y los productos que se manejaron
 ![det1](./assets/OrderDetails1.png "det1")
 ![det2](./assets/OrderDetails2.png "det2")
+
+Los botones  de ver producto y escribir resena, se colocaron con fines meramente ilustrativos
 
 Para agregar una nueva pantalla, o un nuevo componente, se recomienda agregarlo en la carpeta de views
 
