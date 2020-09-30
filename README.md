@@ -4,7 +4,7 @@
 ### Backend: Node js
 ### Frontend: Angular
 
-El front end de ete proyecto fue desarrollado con **CoreUI** en su version 2.7.2. La plantilla puede encontrarse en https://coreui.io/
+El front end de ete proyecto fue desarrollado con **CoreUI** en su version 2.7.2. La plantilla, su documentacion y la instalacion puede encontrarse en https://coreui.io/
 
 Para installar el proyecto, debera dirigirse a cada carpeta (Front y Back) y ejecutar el comando 
 > npm install
@@ -26,7 +26,12 @@ El proyecto cuenta con dos pantallas principales, estas son
 * Pantalla de ordenes, donde se listaran las ordenes que posea el usuario
 ![myOrders](./assets/MyOrders.png "myOrders")
 
-* Pantalla de detalle de orden
+* Pantalla de detalle de orden donde muestra de nuevo, el resumen de la orden y los productos que se manejaron
 ![det1](./assets/OrderDetails1.png "det1")
 ![det2](./assets/OrderDetails2.png "det2")
 
+Para agregar una nueva pantalla, o un nuevo componente, se recomienda agregarlo en la carpeta de views
+
+> npm g c views/nombreComponente
+
+Al igual que si se agrega otro acceso a la api, se recomienda agregar las rutas en un archivo como el de orders, y un controlador en la carpeta *Controlers*
