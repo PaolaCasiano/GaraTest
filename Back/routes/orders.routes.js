@@ -3,11 +3,16 @@ const router = Router();
 
 const orderController = require('../controllers/order.controller');
 
+/**
+ * endpoin para obtener listado de ordenes
+ */
 router.post('/getOrders/', (req, res) => {
-    console.log(req.body)
     res.json(orderController.getAllOrders(req.body.iduser))
 })
 
+/**
+ * endpoin para obtener el detalle de orden
+ */
 router.post('/getorderdetail/', (req, res) => {
     res.json(orderController.getOrderDetail(req.body.idc,req.body.id))
 })

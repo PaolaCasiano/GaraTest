@@ -55,15 +55,22 @@
                         <div class="card-body">
                             <div class="row">
                                 <div class="col-md-4">
+                                    <img src="{{apiUrl}}/img_str/{{p.image}}" alt="">
                                 </div>
                                 <div class="col-md-8">
                                     <table>
                                         <tr>
-                                            <th>Description</th>
+                                            <td colspan="2">
+                                                <i *ngFor='let n of createRange(p.score)' class="fa fa-star text-warning" aria-hidden="true"></i>
+                                                <i *ngFor='let n of createRange(5-p.score)' class="fa fa-star-o text-warning" aria-hidden="true"></i>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th class="va">Description</th>
                                             <td>{{p.description}}</td>
                                         </tr>
                                         <tr>
-                                            <th>Specifications</th>
+                                            <th  class="va" width="20%">Specifications</th>
                                             <td>
                                                 <ul>
                                                     <li *ngFor="let d of p.specifications">{{d}}</li>
@@ -88,9 +95,26 @@
                             </div>
                            
                         </div>
+                        <div class="card-footer">
+                            <div class="row">
+                                <div class="col-md-8"></div>
+                                <div class="col-md-2">
+                                    <button class="btn btn-success btn-block">
+                                        View Product
+                                    </button>
+                                </div>
+                                <div class="col-md-2">
+                                    <button class="btn btn-warning btn-block">
+                                        Write a review
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
                     </div>
               </div>
             </div>
+
+            
         </div>
 	</div>
   	

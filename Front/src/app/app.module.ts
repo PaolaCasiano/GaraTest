@@ -6,8 +6,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { FormsModule } from '@angular/forms'; 
 import { ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
-//my services
-import { AuthenticationService } from './services/authentication.service';
+
 
 //************ELEMENTS*******************
 import { ModalModule } from "ngx-bootstrap";
@@ -79,7 +78,6 @@ import {
     provide: LocationStrategy,
     useClass: HashLocationStrategy
   },
-  AuthenticationService,
   ],
   bootstrap: [ AppComponent ]
 })

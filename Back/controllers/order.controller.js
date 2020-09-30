@@ -1,6 +1,9 @@
-let {getOrders, getOrderDet} = require('../database/access_db' )
+let {getOrders, getOrderDetails} = require('../database/access_db' )
 
-
+/**
+ * busca en el json las ordenes del cliente
+ * @param {id} clientid 
+ */
 function getAllOrders(clientid) {
     let cnt = getOrders(clientid)
     let success = 1;
@@ -14,18 +17,16 @@ function getAllOrders(clientid) {
     }
 }
 
+/**
+ * busca los detalles de la orden con ese id y el id de cliente
+ * @param {int} cliendid id del cliente
+ * @param {int} orderid id de la orden
+ */
 function getOrderDetail(cliendid, orderid){
-    let cnt = getOrders(cliendid)
+    let cnt = getOrderDetails(cliendid, orderid)
     let success = 1;
     if(cnt == null){
         cnt = 'Error: No order found'
-        success = 0
-    }else{
-        console.log(orderid)
-        cnt=cnt.orders.find(x => x.id == orderid);
-    }
-    if(cnt == null){
-        cnt = 'Error: No details found'
         success = 0
     }
     return {

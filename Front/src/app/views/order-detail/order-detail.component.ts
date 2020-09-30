@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Router, ActivatedRoute } from '@angular/router';
 import { ConexionService } from '../../services/conexion.service';
 import { first } from 'rxjs/operators';
-
+import { environment } from '../../../environments/environment';
 @Component({
   selector: 'app-order-detail',
   templateUrl: './order-detail.component.html',
@@ -13,6 +13,7 @@ export class OrderDetailComponent implements OnInit {
   id_order : string;
   orderdata : Array<any>;
   loaded = false;
+  apiUrl = environment.apiUrl;
   
   constructor(private route: ActivatedRoute
     , private conexionService: ConexionService) { }
@@ -33,6 +34,14 @@ export class OrderDetailComponent implements OnInit {
 	            error => {
 	                console.log(error);
 	            });
+  }
+
+  createRange(num){
+    let range = [];
+    for(let i = 0; i<num; i++){
+      range.push(i);
+    }
+    return range;
   }
 }
 

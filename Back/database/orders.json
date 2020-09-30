@@ -24,7 +24,9 @@
                     "quantity":1,
                     "specifications": ["Made of wood and paint","3-Piece set includes large,medium andsmall nesting dollss","Made in Canada"],
                     "unitPrice":"10.00",
-                    "totalPrice":"10.00"
+                    "totalPrice":"10.00",
+                    "image":"russiandolls.jpg",
+                    "score":5
                 },
                 {
                     "id":2,
@@ -33,9 +35,94 @@
                     "quantity":1,
                     "specifications": ["Made of cotton","Includes Hat","Made in Russia"],
                     "unitPrice":"140.00",
-                    "totalPrice":"140.00"
+                    "totalPrice":"140.00",
+                    "image":"russiandress.jpg",
+                    "score":4
+                }
+            ]
+        },
+        {
+            "id":2,
+            "createdDate":"2020-05-25",
+            "status":"status",
+            "shippingType":"Ship",
+            "shippingPrice":"3.00",
+            "deliveryAddress":"855 North Ave. East Northport, NY 11731",
+            "total":"122.93",
+            "sumTotal":"125.93",
+            "paymentMethod":{
+                "type":"visa",
+                "detail":"*****2855"
+            },
+            "detail":[
+                {
+                    "id":3,
+                    "name":"Peppa pig toy",
+                    "description":"Adorable little Peppa, oinks, giggles and talks, charming her human friends with phrases like “I love hugs!”",
+                    "quantity":1,
+                    "specifications": ["Size: 9\"x5\"x11\"","Weight: lb","Battery 3AA"],
+                    "unitPrice":"89.95",
+                    "totalPrice":"89.95",
+                    "image":"peeppapig.jpg",
+                    "score":3
+                },
+                {
+                    "id":4,
+                    "name":"Juguete Play-Doh – Juego de diversión en la granja de lujo",
+                    "description":"Granja de playdoh con 6 colores",
+                    "quantity":2,
+                    "specifications": ["Play-Doh infantil permite tomar la tapa apagado su imaginación y explorar su creatividad ","Puede paquetes y herramienta básica conjuntos ofrecen todo tipo de juego de composición abierta ","Playsets vienen en diferentes temas y ofrecen un montón de creativo juego de rol "],
+                    "unitPrice":"16.49",
+                    "totalPrice":"32.98",
+                    "image":"playdoh.jpg",
+                    "score":5
                 }
             ]
         }
     ]
+},
+{  "client":{
+    "id":3,
+    "name":"Anne Samuels"
+},
+"orders":[
+    {
+        "id":7,
+        "createdDate":"2020-05-25",
+        "status":"status",
+        "shippingType":"Ship",
+        "shippingPrice":"3.00",
+        "deliveryAddress":"855 North Ave. East Northport, NY 11731",
+        "total":"200.00",
+        "sumTotal":"203.00",
+        "paymentMethod":{
+            "type":"visa",
+            "detail":"*****2855"
+        },
+        "detail":[
+            {
+                "id":3,
+                "name":"Peppa pig toy",
+                "description":"Adorable little Peppa, oinks, giggles and talks, charming her human friends with phrases like “I love hugs!”",
+                "quantity":1,
+                "specifications": ["Size: 9\"x5\"x11\"","Weight: lb","Battery 3AA"],
+                "unitPrice":"89.95",
+                "totalPrice":"89.95",
+                "image":"peeppapig.jpg",
+                "score":3
+            },
+            {
+                "id":4,
+                "name":"Juguete Play-Doh – Juego de diversión en la granja de lujo",
+                "description":"Granja de playdoh con 6 colores",
+                "quantity":2,
+                "specifications": ["Play-Doh infantil permite tomar la tapa apagado su imaginación y explorar su creatividad ","Puede paquetes y herramienta básica conjuntos ofrecen todo tipo de juego de composición abierta ","Playsets vienen en diferentes temas y ofrecen un montón de creativo juego de rol "],
+                "unitPrice":"16.49",
+                "totalPrice":"32.98",
+                "image":"russiandress.jpg",
+                "score":5
+            }
+        ]
+    }
+]
 }]
