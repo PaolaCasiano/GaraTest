@@ -3,6 +3,7 @@ import { Router, ActivatedRoute } from '@angular/router';
 import { ConexionService } from '../../services/conexion.service';
 import { first } from 'rxjs/operators';
 import { environment } from '../../../environments/environment';
+import { AlertComponent } from 'ngx-bootstrap';
 @Component({
   selector: 'app-order-detail',
   templateUrl: './order-detail.component.html',
@@ -28,11 +29,11 @@ export class OrderDetailComponent implements OnInit {
                     this.orderdata = data.info	  
                     this.loaded = true                  
 	                }else{
-	                    console.log(data.message)
+	                    alert(data.info)
 	                }
 	            },
 	            error => {
-	                console.log(error);
+	                alert("Error de conexion, no se ha podido conectar con el servidor")
 	            });
   }
 

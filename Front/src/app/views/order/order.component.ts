@@ -28,12 +28,12 @@ export class OrderComponent implements OnInit {
                 	this.loaded = true;
                   this.orders = data.info.orders;
                 }else{
-                    console.log(data.message)
-                }
-            },
-            error => {
-                console.log(error);
-            });
+                  alert(data.info)
+              }
+          },
+          error => {
+              alert("Error de conexion, no se ha podido conectar con el servidor")
+          });
   }
 
 }
