@@ -13,12 +13,5 @@ export class OrderCardComponent implements OnInit {
   ngOnInit() {
   }
   
-  createRange(num){
-    let range = [];
-    for(let i = 0; i<num; i++){
-      range.push(i);
-    }
-    return range;
-  }
 
 }

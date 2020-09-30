@@ -1,0 +1,97 @@
+<div *ngIf="loaded"  class="animated fadeIn">
+	<div class="card">
+		<div class="card-header">
+            <h3>Order no. {{orderdata.id}}</h3>
+        </div> 
+        <div class="row">
+            <div class="col-md-6 col-sm-12">
+                <table class="table">
+                    <tr>
+                        <th>Status:</th>
+                        <td>{{orderdata.status}}</td>
+                    </tr>
+                    <tr>
+                        <th width="65%" >Order placed at:</th>
+                        <td>{{orderdata.createdDate}}</td>
+                    </tr>
+                    <tr>
+                        <th>Shipping Type:</th>
+                        <td>{{orderdata.shippingType}}</td>
+                    </tr>
+                    <tr>
+                        <th>Shipping Price:</th>
+                        <td>$ {{orderdata.shippingPrice}}</td>
+                    </tr>
+                    
+                </table>
+            </div>
+            <div class="col-md-6 col-sm-12">
+                <table class="table"><tr>
+                    <th>Products:</th>
+                    <td>{{orderdata.detail.length}}</td>
+                </tr>
+                <tr>
+                    <th>Total Products:</th>
+                    <td>$ {{orderdata.total}}</td>
+                </tr>
+                <tr>
+                    <th>Total:</th>
+                    <td>$ {{orderdata.sumTotal}}</td>
+                </tr>
+                    <tr>
+                        <th>Ship Address:</th>
+                        <td>{{orderdata.deliveryAddress}}</td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+        <div class="card-body">
+            <div  class="row">
+                <div class="col-md-12">
+                    <div *ngFor="let p of orderdata.detail"  class="card">
+                        <div class="card-header">
+                            <h5>{{p.name}}</h5>
+                        </div>
+                        <div class="card-body">
+                            <div class="row">
+                                <div class="col-md-4">
+                                </div>
+                                <div class="col-md-8">
+                                    <table>
+                                        <tr>
+                                            <th>Description</th>
+                                            <td>{{p.description}}</td>
+                                        </tr>
+                                        <tr>
+                                            <th>Specifications</th>
+                                            <td>
+                                                <ul>
+                                                    <li *ngFor="let d of p.specifications">{{d}}</li>
+                                                </ul>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th>Quantity</th>
+                                            <td>{{p.quantity}}</td>
+                                        </tr>
+                                        <tr>
+                                            <th>Unit Price</th>
+                                            <td>$ {{p.unitPrice}}</td>
+                                        </tr>
+                                        <tr>
+                                            <th>Description</th>
+                                            <td>$ {{p.totalPrice}}</td>
+                                        </tr>
+                                    </table>
+                                </div>
+
+                            </div>
+                           
+                        </div>
+                    </div>
+              </div>
+            </div>
+        </div>
+	</div>
+  	
+ </div>

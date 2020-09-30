@@ -8,13 +8,13 @@ import { first } from 'rxjs/operators';
   styleUrls: ['./order.component.css']
 })
 export class OrderComponent implements OnInit {
-  loaded = true;
+  loaded = false;
   user = {
     id:2
   }
   orders = []
 
-
+ 
   constructor(
     private conexionService:ConexionService
   ) { }
@@ -26,7 +26,7 @@ export class OrderComponent implements OnInit {
             data => {
                 if(data.success == 1){
                 	this.loaded = true;
-                	 this.orders = data.orders;
+                  this.orders = data.info.orders;
                 }else{
                     console.log(data.message)
                 }

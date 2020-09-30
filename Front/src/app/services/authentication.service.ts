@@ -6,11 +6,16 @@ import { first } from 'rxjs/operators';
 import { INavData } from '@coreui/angular';
 import { environment } from '../../environments/environment';
 
+/***
+ * Este servicio maneja el sistema de autenticacion de la pagina, se guardarian los datos en
+ * storage
+ */
+
 @Injectable({ providedIn: 'root' })
 export class AuthenticationService {
     private currentUserSubject: BehaviorSubject<any>;
     public currentUser: Observable<any>;
-    public api = environment.apiUrl;//'http://192.168.1.15:8000';
+    public api = environment.apiUrl;
 
     constructor(private http: HttpClient) {
         this.currentUserSubject = new BehaviorSubject<any>(JSON.parse(localStorage.getItem('currentUser')));
@@ -38,8 +43,6 @@ export class AuthenticationService {
                 }
                 return user;
             }));
-
-            //return "err";
     }
 
     getUserMenu(){

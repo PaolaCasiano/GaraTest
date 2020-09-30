@@ -1,1 +1,62 @@
-<p>order-card works!</p>
+<div class="card">
+    <div class="card-header">
+        Order No. {{data.id}}
+    </div>
+    <div class="card-body">
+        <div class="row">
+            <div class="col-md-4 col-sm-12">
+                <table>
+                    <tr>
+                        <th>Status:</th>
+                        <td>{{data.status}}</td>
+                    </tr>
+                    <tr>
+                        <th width="65%" >Order placed at:</th>
+                        <td>{{data.createdDate}}</td>
+                    </tr>
+                    <tr>
+                        <th>Shipping Type:</th>
+                        <td>{{data.shippingType}}</td>
+                    </tr>
+                    <tr>
+                        <th>Shipping Price:</th>
+                        <td>$ {{data.shippingPrice}}</td>
+                    </tr>
+                    <tr>
+                        <th>Products:</th>
+                        <td>{{data.detail.length}}</td>
+                    </tr>
+                    <tr>
+                        <th>Total Products:</th>
+                        <td>$ {{data.total}}</td>
+                    </tr>
+                    <tr>
+                        <th>Total:</th>
+                        <td>$ {{data.sumTotal}}</td>
+                    </tr>
+                </table>
+            </div>
+            <div class="col-md-5 col-sm-12">
+                <table>
+                    <tr>
+                        <th>Ship Address:</th>
+                    </tr>
+                    <tr>
+                        <td>{{data.deliveryAddress}}</td>
+                    </tr>
+                </table>
+            </div>
+            <div class="col-md-3 col-sm-12">
+                <a class="btn btn-block btn-success" href="#/orders/detail/{{data.id}}" >
+                    Order Detail
+                </a>
+                <button class="btn btn-block btn-warning">
+                    Tracking
+                </button>
+                <button class="btn btn-block btn-danger">
+                    Report a problem
+                </button>
+            </div>
+        </div>
+    </div> 
+</div>
