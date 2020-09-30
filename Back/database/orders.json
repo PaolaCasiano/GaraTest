@@ -1,0 +1,25 @@
+[{
+    "id":1,
+    "createdDate":"2020-10-25",
+    "status":"status",
+    "shippingTipe":"1",
+    "shippingPrice":"4.00",
+    "client":{
+        "id":100,
+        "name":"John Smith"
+    },
+    "detail":[
+        {
+            "id":1,
+            "name":"Russian Nesting Dolls 3 Piece Set",
+            "description":"Enjoy a modern twist on an age-old tradition with our beautiful set of Russian nesting dolls. Showing vibrant artistry in a World Market-exclusive design, these time-honored matryoshka dolls are loved by enthusiasts around the globe and make a charming gift.",
+            "quantity":1,
+            "specifications": [{
+                "0":"Made of wood and paint",
+                "1":"3-Piece set includes large,medium andsmall nesting dollss",
+                "2":"Made in Canada"
+            }]
+        }
+    ]
+
+}]

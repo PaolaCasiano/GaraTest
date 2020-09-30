@@ -1,0 +1,10 @@
+[
+    {
+        "id":1,
+        "name":"product1",
+        "description":"this is a test product",
+        "unitprice":25.00,
+        "score":5,
+        "quantity":25
+    }
+]

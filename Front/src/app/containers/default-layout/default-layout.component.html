@@ -1,0 +1,82 @@
+
+
+<app-header
+[navbarBrandRouterLink]="['/']"
+[fixed]="true"
+[navbarBrandFull]="{src: 'assets/img/brand/logo.svg', width: 89, height: 25, alt: 'CoreUI Logo'}"
+[navbarBrandMinimized]="{src: 'assets/img/brand/sygnet.svg', width: 30, height: 30, alt: 'CoreUI Logo'}"
+[sidebarToggler]="'lg'"
+[asideMenuToggler]="'lg'">
+<ul class="nav navbar-nav ml-auto" >
+    <li  *ngIf='mostrar'  class="nav-item d-md-down-none">
+        <a class="nav-link" href="#/user/chat"><i class="icon-bubble"></i></a>
+    </li>
+    <li *ngIf='mostrar'  class="nav-item dropdown" dropdown placement="bottom right">
+        <a class="nav-link" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false" dropdownToggle (click)="false">
+        <img src="{{apiip}}/{{usuario.FOTOGRAFIA}}" class="img-avatar" alt="{{usuario.USERNAME}}"/>
+        </a>
+        <div class="dropdown-menu dropdown-menu-right" *dropdownMenu aria-labelledby="simple-dropdown">
+            <div class="dropdown-header text-center"><strong>Configuraciones</strong></div>
+            <a class="dropdown-item" href="#/user/perfil"><i class="fa fa-user"></i> Perfil</a>
+            <div class="divider"></div>
+            <a class="dropdown-item" (click)='logout()'><i class="fa fa-lock"></i> Logout</a>
+        </div>
+    </li>
+</ul>
+</app-header>
+<div class="app-body">
+    <app-sidebar #appSidebar [fixed]="true" [display]="'lg'" [minimized]="sidebarMinimized" (minimizedChange)="toggleMinimize($event)">
+    <app-sidebar-nav [navItems]="navItems" [perfectScrollbar] [disabled]="appSidebar.minimized"></app-sidebar-nav>
+    <app-sidebar-minimizer></app-sidebar-minimizer>
+    </app-sidebar>
+    <!-- Main content -->
+    <main class="main">
+        <!-- Breadcrumb -->
+        <!-- breaking change 'cui-breadcrumb' -->
+        <cui-breadcrumb>
+            <!-- Breadcrumb Menu-->
+            <!-- <li class="breadcrumb-menu d-md-down-none">
+                <div class="btn-group" role="group" aria-label="Button group with nested dropdown">
+                    <a class="btn" href="#"><i class="icon-speech"></i></a>
+                    <a class="btn" [routerLink]="['/dashboard']"><i class="icon-graph"></i> &nbsp;Dashboard</a>
+                    <a class="btn" href="#"><i class="icon-settings"></i> &nbsp;Settings</a>
+                </div>
+            </li> -->
+        </cui-breadcrumb>
+        <div class="container-fluid">
+            <router-outlet></router-outlet>
+        </div>
+        <!-- /.container-fluid -->
+    </main>
+    <app-aside [fixed]="true" [display]="false" [ngClass]="'test'"> 
+        <tabset>
+            <tab>
+                <ng-template tabHeading><i class="icon-settings"></i></ng-template>
+                <div class="p-3">
+                    <h6>Opciones</h6>
+                    <div  *ngIf='mostrar' class="aside-options">
+                        <div> 
+                            <a href="#/user/carga"><strong class="text-info"> <i class="fa fa-shopping-bag" aria-hidden="true"></i> Control de Productos</strong></a>
+                        </div>
+                    </div>
+                    <div  *ngIf='!mostrar' class="aside-options">
+                        <div> 
+                            <a href="#/register"><strong class="text-info"> <i class="fa fa-pencil-square " aria-hidden="true"></i>Registrarse</strong></a>
+                        </div>
+                    </div>
+                    <div  *ngIf='!mostrar' class="aside-options">
+                        <div> 
+                            <a href="#/login"><strong class="text-info"> <i class="fa fa-user " aria-hidden="true"></i>Iniciar Sesion</strong></a>
+                        </div>
+                    </div>
+                    
+                </div>
+            </tab>
+        </tabset>
+    </app-aside>
+</div>
+<!-- <app-footer>
+    <span><a href="https://coreui.io">CoreUI</a> &copy; 2018 creativeLabs.</span>
+    <span class="ml-auto">Powered by <a href="https://coreui.io/angular">CoreUI for Angular</a></span>
+</app-footer> -->
+
