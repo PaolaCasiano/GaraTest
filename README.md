@@ -24,9 +24,9 @@ Actualmente se simula un usuario logueado, el json que contiene los datos se enc
 
 El proyecto cuenta con dos pantallas principales, estas son
 * Pantalla de ordenes, donde se listaran las ordenes que posea el usuario
-![myOrders](./assets/images/MyOrders.png "myOrders")
+![myOrders](./assets/MyOrders.png "myOrders")
 
 * Pantalla de detalle de orden
-![det1](./assets/images/OrderDetails1.png "det1")
-![det2](./assets/images/OrderDetails2.png "det2")
+![det1](./assets/OrderDetails1.png "det1")
+![det2](./assets/OrderDetails2.png "det2")
 
